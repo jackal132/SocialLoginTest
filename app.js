@@ -18,6 +18,7 @@ configurePassport(app);
 
 // 라우팅
 const authRouter = require('./routes/auth');
+// 여기서 사용한 /auth 가 호출 url 앞에 붙음
 app.use('/auth',authRouter);
 
 app.get('/', (req, res) => {
