@@ -3,6 +3,7 @@ const passport = require('passport');
 const router = express.Router();
 
 // facebook router
+// 페이스북은 그냥 profile 로 호출하면 오류남 public_profile이여야함
 router.get(
     '/login/facebook', 
     passport.authenticate('facebook', {scope : ['public_profile']}));
